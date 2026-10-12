@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="quiz.css">
+    <script src="quiz.js" defer></script>
+</head>
+<body>
+    <main class="quiz-container">
+        <header class="quiz-header">
+            <div>
+                <p class="eyebrow">YOUR LEARNING SPACE</p>
+                <h1>Quiz App</h1>
+                <p id="welcomeText">Test your knowledge.</p>
+            </div>
+
+            <button type="button" id="logoutBtn" class="logout-btn">
+                Logout
+            </button>
+        </header>
+
+        <section class="quiz-card" id="container">
+            <div class="quiz-top">
+                <span id="qno">Question 1 of 5</span>
+                <span id="timer" aria-live="off">02:00</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <h2 id="question"></h2>
+
+            <form id="quizForm">
+                <fieldset id="optionsGroup">
+                    <legend class="visually-hidden">
+                        Choose one answer
+                    </legend>
+
+                    <label class="option">
+                        <input type="radio" name="quiz" id="option1">
+                        <span id="label1"></span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="quiz" id="option2">
+                        <span id="label2"></span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="quiz" id="option3">
+                        <span id="label3"></span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="quiz" id="option4">
+                        <span id="label4"></span>
+                    </label>
+                </fieldset>
+
+                <p id="quizError" class="quiz-error" role="alert"></p>
+
+                <button type="submit" id="nextBtn" class="next-btn">
+                    Next Question
+                </button>
+            </form>
+        </section>
+
+        <p class="quiz-footer">
+            Take your time, read each question carefully.
+        </p>
+    </main>
+</body>
+</html>
